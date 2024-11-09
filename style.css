@@ -1,0 +1,657 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e6f2ff; 
+}
+
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.navbar a {
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #4CAF50; 
+    border-radius: 25px; 
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #45a049; 
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.info {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.gallery a {
+    flex: 1 1 calc(25% - 20px); 
+    display: block;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.contact-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+}
+
+.contact-form {
+    width: 60%;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.submit-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: darkgreen;
+}
+
+.intro-text {
+    background-color: #f9fdf9; 
+    border: 1px solid #a5d6a7; 
+    padding: 20px;
+    border-radius: 15px; 
+    box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.1); 
+    max-width: 80%;
+    margin: 20px auto;
+    line-height: 1.6em; 
+}
+
+.intro-text p {
+    margin: 10px 0;
+    color: #333;
+}
+
+
+.contact-section h2 {
+    font-size: 2.5em;
+    color: #4CAF50; 
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #2e7d32; 
+    margin-bottom: 5px;
+    display: block;
+    font-size: 1.1em;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 1px solid #a5d6a7; 
+    border-radius: 8px; 
+    box-shadow: inset 0px 1px 4px rgba(0, 128, 0, 0.1); 
+    background-color: #f9fdf9; 
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #4CAF50; 
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.submit-btn {
+    background-color: #4CAF50; 
+    transition: 300ms all;
+
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049; 
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #000; 
+    margin-bottom: 5px;
+    display: block;
+    font-size: 1.1em;
+}
+
+a{
+    text-decoration: none;
+    -webkit-text-fill-color: rgb(0, 0, 0);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333; 
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    color: #4CAF50; 
+    font-weight: bold;
+    font-size: 1em;
+    margin: 0;
+}
+
+.footer-logo {
+    margin-top: 5px;
+    max-height: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 128, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 128, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 128, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: rgba(0, 128, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 128, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: rgba(0, 128, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+    background-image: url('Images/ferrari-banner.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.ferrari-details {
+    background-color: #f9fdf9;
+    border: 2px solid #a5d6a7;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.1);
+}
+
+.ferrari-details h2 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.ferrari-details p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6em;
+    margin-bottom: 15px;
+}
+
+.enzo-ferrari-image {
+    background-color: #f9fdf9;
+    border: 2px solid #a5d6a7;
+    padding: 15px;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.1);
+    text-align: center;
+}
+
+.enzo-ferrari-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #4CAF50;
+    transition: transform 0.3s ease;
+}
+
+.enzo-ferrari-image img:hover {
+    transform: scale(1.05);
+}
+
+.enzo-name {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.intro-text {
+    background-color: #f9fdf9;
+    border: 2px solid #a5d6a7;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.1);
+    text-align: center;
+}
+
+.lambo-details {
+    background-color: #f9fdf9;
+    border: 2px solid #a5d6a7;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.1);
+}
+
+.lambo-details h2 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.lambo-details p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6em;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer .footer-logo {
+    margin-top: 10px;
+    max-height: 40px;
+}
+
+section.lambo {
+    width: 100%;
+    height: 400px; 
+    background-image: url('Images/noviban.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+section.lambo-details {
+    background-color: #f9fdf9;
+    border: 2px solid #a5d6a7;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.1);
+}
+
+    h2.lambo-details {
+        font-size: 2.5em;
+        color: #4CAF50;
+        text-align: center;
+        margin-bottom: 20px;
+}
+
+    p.lambo-details  {
+        font-size: 1.1em;
+        color: #333;
+        line-height: 1.8em;  
+        margin-bottom: 20px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.intro-text {
+    background-color: #f9fdf9;
+    border: 2px solid #a5d6a7;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.1);
+    text-align: center;
+}
+
+.car-details {
+    background-color: #f9fdf9;
+    border: 2px solid #a5d6a7;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.1);
+}
+
+.car-details h2 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.car-details p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.8em;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+section.porshe {
+    width: 100%;
+    height: 500px; 
+    background-image: url('Images/porsheban.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
